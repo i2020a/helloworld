@@ -25,6 +25,5 @@ jobs:
       #    key: deps9-{{ .Branch }}- {{ checksum "Pipfile.lock" }}
       #    paths:
       #      - "venv"
-      - run:
-        command: python3 ./helloworld.py
+      - run: python3 ./helloworld.py
 
