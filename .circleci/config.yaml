@@ -9,5 +9,5 @@ jobs:
 
   steps:
     - checkout
-    - run: python3 helloworld.py
+    - run: ./helloworld.py
 
