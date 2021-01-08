@@ -4,9 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.9
-        #auth:
-        #  username: ia2020
-        #  password: 2eb21102-c74c-4e13-b98e-c680dd6004ac
+        auth:
+          username: ia2020
+          password: 2eb21102-c74c-4e13-b98e-c680dd6004ac
 
         #environment:
         #  PIPENV_VENV_IN_PROJECT: true
