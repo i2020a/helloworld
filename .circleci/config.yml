@@ -4,28 +4,27 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.9
-        auth:
-          username: ia2020
-          password: 2eb21102-c74c-4e13-b98e-c680dd6004ac
+        #auth:
+        #  username: ia2020
+        #  password: 2eb21102-c74c-4e13-b98e-c680dd6004ac
 
-        environment:
-          PIPENV_VENV_IN_PROJECT: true
+        #environment:
+        #  PIPENV_VENV_IN_PROJECT: true
 
   working_directory: ~/repo
 
   steps:
     - checkout
-    - restore_cache:
-        key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-    - run: 
-        command: |
-          sudo pip install pipenv
-          pipenv install
-    - save_cache:
-        key: deps9-{{ .Branch }}- {{ checksum "Pipfile.lock" }}
-        paths:
-          - "venv"
+    #- restore_cache:
+    #    key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+    #- run: 
+    #    command: |
+    #      sudo pip install pipenv
+    #      pipenv install
+    #- save_cache:
+    #    key: deps9-{{ .Branch }}- {{ checksum "Pipfile.lock" }}
+    #    paths:
+    #      - "venv"
     - run:
-      command: |
-          pipenv run python3 ./helloworld.py
+      command: python3 ./helloworld.py
 
